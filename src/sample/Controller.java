@@ -20,6 +20,7 @@ public class Controller implements Initializable {
 
     public void addContact() {
         if (!textName.getText().equals("") && !textPhone.getText().equals("") && !textEmail.getText().equals("")) {
+
             contacts.add(new Contact(textName.getText(), textPhone.getText(), textEmail.getText()));
 
         } else if (textName.getText().equals("") && textPhone.getText().equals("") && textEmail.getText().equals("")) {
@@ -28,6 +29,7 @@ public class Controller implements Initializable {
     }
 
     public void removeContact() {
+
         Contact item = (Contact) list.getSelectionModel().getSelectedItem();
         contacts.remove(item);
     }
